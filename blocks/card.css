@@ -1,16 +1,6 @@
-.card {
-  width: 413px;
-}
-
-.card__title {
-  line-height: 24px;
-  font-size: 1.2;
-  font-weight: 500;
-}
-
 .card__image {
-  height: 413px;
   width: 100%;
+  height: 413px;
   object-fit: cover;
   display: block;
   border-radius: 2%;
@@ -18,16 +8,20 @@
 
 .card__content {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  font-size: 20px;
-  line-height: 120%;
+  gap: 37px;
+  align-items: center;
+  line-height: 24px;
   font-weight: 500;
+}
+
+.card__title {
+  line-height: 24px;
+  font-weight: 500;
+  font-size: 20px;
   text-overflow: ellipsis;
+  white-space: nowrap;
   overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
 }
 
 .card__like-btn {
