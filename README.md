@@ -2,9 +2,14 @@
 
 ### Overview
 
+[Video Overview](https://drive.google.com/file/d/1AIFliItO4Joto039k42zXXUVDPg7uqQ-/view?usp=sharing)
+
 - Intro
+- Techstack
 - Figma
 - Images
+- Deployment
+- Conclusion
 
 **Intro**
 
