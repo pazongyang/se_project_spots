@@ -32,6 +32,7 @@
 
 .profile__description {
   margin: 0;
+  max-width: 505px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
@@ -47,7 +48,7 @@
 .profile__edit-btn {
   margin-top: auto;
   margin-right: auto;
-  padding: 0 auto;
+  padding: 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
@@ -56,6 +57,11 @@
   gap: 8px;
   border: none;
   background-color: transparent;
+  color: rgba(33, 33, 33, 1);
+}
+
+.profile__edit-btn:hover {
+  opacity: 100%;
 }
 
 .profile__add-btn {
@@ -74,6 +80,10 @@
   font-size: 16px;
   line-height: 1;
   border: none;
+}
+
+.profile__add-btn:hover {
+  background-color: rgba(33, 33, 33, 0.8);
 }
 
 .profile__add-btn-img {
@@ -103,6 +113,7 @@
   }
 
   .profile__description {
+    max-width: 288px;
     margin: 0 0 32px;
   }
 
