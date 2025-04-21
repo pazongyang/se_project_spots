@@ -39,8 +39,12 @@
   background-color: transparent;
   border: none;
   opacity: 40%;
+  color: #212121;
 }
 
+.modal__close-btn:hover {
+  opacity: 100%;
+}
 .modal__title {
   margin: 0 0 32px;
   font-size: 32px;
@@ -68,6 +72,10 @@
   width: 100%;
   border-radius: 8px;
   border: 1px solid #2121214d;
+}
+
+.modal__input:hover {
+  border: 1px solid #212121;
 }
 
 .modal__input::placeholder {
