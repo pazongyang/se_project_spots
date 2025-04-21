@@ -22,7 +22,7 @@
   max-width: 730px;
   width: 100%;
   background-color: #fff;
-  radius: 8px;
+  border-radius: 8px;
   padding: 32px 50px;
   position: relative;
 }
