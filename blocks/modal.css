@@ -12,10 +12,14 @@
   font-family: Poppins, Arial, Helvetica, sans-serif;
   font-weight: 500;
   padding: 10px;
+  opacity: 0;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
 }
 
 .modal_is-opened {
   visibility: visible;
+  opacity: 1;
+  transition-delay: 0s;
 }
 
 .modal__container {
@@ -53,7 +57,7 @@
   color: #212121;
 }
 
-.modal__form {
+.modal__form > ul {
   display: flex;
   flex-direction: column;
 }
