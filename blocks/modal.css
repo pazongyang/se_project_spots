@@ -29,6 +29,7 @@
   border-radius: 8px;
   padding: 32px 50px;
   position: relative;
+  box-sizing: border-box;
 }
 
 .modal__close-btn {
@@ -43,7 +44,7 @@
   background-color: transparent;
   border: none;
   opacity: 40%;
-  color: #212121;
+  cursor: pointer;
 }
 
 .modal__close-btn:hover {
@@ -57,7 +58,7 @@
   color: #212121;
 }
 
-.modal__form > ul {
+.modal__form {
   display: flex;
   flex-direction: column;
 }
@@ -75,7 +76,11 @@
   padding: 16px 12px;
   width: 100%;
   border-radius: 8px;
-  border: 1px solid #2121214d;
+  border: 1px solid #212121;
+  opacity: 40%;
+  font-size: 20px;
+  line-height: 1;
+  box-sizing: border-box;
 }
 
 .modal__input:hover {
@@ -95,6 +100,10 @@
   background-color: #212121;
   color: #fcf5e5;
   border: none;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
