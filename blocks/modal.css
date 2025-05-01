@@ -76,8 +76,8 @@
   padding: 16px 12px;
   width: 100%;
   border-radius: 8px;
-  border: 1px solid #212121;
-  opacity: 40%;
+  border: 1px solid #21212166;
+
   font-size: 20px;
   line-height: 1;
   box-sizing: border-box;
@@ -106,6 +106,10 @@
   cursor: pointer;
 }
 
+.modal__submit-btn:hover {
+  background-color: #212121cc;
+}
+
 @media screen and (max-width: 627px) {
   .modal__container {
     max-width: 300px;
@@ -131,7 +135,6 @@
 
   .modal__input {
     font-size: 16px;
-    line-height: 1;
     max-width: 276px;
   }
 
@@ -141,6 +144,5 @@
 
   .modal__submit-btn {
     max-width: none;
-    line-height: 1;
   }
 }
