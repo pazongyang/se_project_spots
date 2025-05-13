@@ -49,6 +49,7 @@
 
 .modal__close-btn:hover {
   opacity: 100%;
+  cursor: pointer;
 }
 .modal__title {
   margin: 0 0 32px;
@@ -77,6 +78,7 @@
   width: 100%;
   border-radius: 8px;
   border: 1px solid #21212166;
+
   font-size: 20px;
   line-height: 1;
   box-sizing: border-box;
@@ -107,6 +109,7 @@
 
 .modal__submit-btn:hover {
   background-color: #212121cc;
+  cursor: pointer;
 }
 
 .modal__image-container {
@@ -123,10 +126,10 @@
 }
 
 .modal__close_type_preview {
-  /* style button (color White) */
   top: 0;
   right: -52.5px;
   background: transparent;
+  opacity: 100%;
 }
 
 .modal__close_type_preview:hover {
@@ -149,7 +152,12 @@
   .modal__container {
     max-width: 300px;
     width: 100%;
-    padding: 12px 12px;
+    padding: 22px 12px;
+  }
+
+  .modal__image {
+    max-width: none;
+    min-width: none;
   }
 
   .modal__title {
