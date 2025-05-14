@@ -50,13 +50,8 @@ const newPostCaptionInput = newPostCardModal.querySelector(
   "#caption-image-input"
 );
 
-const cardEl = document.querySelector("card");
-
 const profileNameEl = document.querySelector(".profile__name");
 const profileDescriptionEl = document.querySelector(".profile__description");
-
-const newPostImageEl = document.querySelector("card__image");
-const newPostCardTitleEl = document.querySelector("card__title");
 
 const previewModal = document.querySelector("#preview-modal");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
