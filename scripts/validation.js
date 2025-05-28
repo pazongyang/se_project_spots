@@ -1,0 +1,71 @@
+const settings = {
+  formSelector: ".modal__form",
+  inputSelector: ".modal__input",
+  submitButtonSelector: ".modal__submit-btn",
+  inactiveButtonClass: "modal__submit-btn:disabled",
+  inputErrorClass: "modal__input_type_error",
+  errorClass: "modal__error",
+};
+
+const showInputError = (formEl, inputEl, errorMsg, settings) => {
+  const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
+  errorMsgEl.textContent = errorMsg;
+  inputEl.classList.add(settings.inputErrorClass);
+};
+
+const hideInputError = (formEl, inputEl, settings) => {
+  const errorMsgEl = formEl.querySelector(`#${inputEl.id}-error`);
+  errorMsgEl.textContent = "";
+  inputEl.classList.remove(settings.inputErrorClass);
+};
+
+const checkInputValidity = (formEl, inputEl, settings) => {
+  console.log(inputEl.validationMessage);
+
+  if (!inputEl.validity.valid) {
+    showInputError(formEl, inputEl, inputEl.validationMessage, settings);
+  } else {
+    hideInputError(formEl, inputEl, settings);
+  }
+};
+
+const hasInvalidInput = (inputList, settings) => {
+  return inputList.some((input) => {
+    return !input.validity.valid;
+  });
+};
+
+const toggleButtonState = (inputList, buttonEl, settings) => {
+  if (hasInvalidInput(inputList)) {
+    disabledButton(buttonEl);
+  } else {
+    buttonEl.disabled = false;
+  }
+};
+
+const disabledButton = (buttonEl, settings) => {
+  buttonEl.disabled = true;
+};
+
+const setEventListeners = (formEl, settings) => {
+  const inputList = Array.from(formEl.querySelectorAll(settings.inputSelector));
+  const buttonEl = formEl.querySelector(settings.submitButtonSelector);
+
+  toggleButtonState(inputList, buttonEl);
+
+  inputList.forEach((inputEl) => {
+    inputEl.addEventListener("input", function () {
+      checkInputValidity(formEl, inputEl, settings);
+      toggleButtonState(inputList, buttonEl, settings);
+    });
+  });
+};
+
+const enableValidation = (settings) => {
+  const formList = document.querySelectorAll(settings.formSelector);
+  formList.forEach((formEl) => {
+    setEventListeners(formEl, settings);
+  });
+};
+
+enableValidation(settings);

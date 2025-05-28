@@ -60,21 +60,33 @@
             <img src="./images/close-icon.svg" alt="close button" />
           </button>
           <h2 class="modal__title">Edit profile</h2>
-          <form class="modal__form">
+          <form class="modal__form" novalidate>
             <label for="profile-name-input" class="modal__label required"
               >Name<input
                 id="profile-name-input"
                 type="text"
                 class="modal__input"
                 placeholder="Type your name"
-            /></label>
+                minlength="2"
+                maxlength="40"
+                required /><span
+                id="profile-name-input-error"
+                class="modal__error"
+              ></span
+            ></label>
             <label for="profile-description-input" class="modal__label" required
               >Description<input
                 id="profile-description-input"
                 type="text"
                 class="modal__input"
                 placeholder="Describe yourself"
-            /></label>
+                minlength="2"
+                maxlength="200"
+                required /><span
+                id="profile-description-input-error"
+                class="modal__error"
+              ></span
+            ></label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
@@ -85,14 +97,15 @@
             <img src="./images/close-icon.svg" alt="close button" />
           </button>
           <h2 class="modal__title">New post</h2>
-          <form class="modal__form">
+          <form class="modal__form" novalidate>
             <label for="card-image-input" class="modal__label"
               >Image link<input
                 id="card-image-input"
                 type="url"
                 class="modal__input"
                 placeholder="Paste a link to the picture"
-              />
+                required
+              /><span id="card-image-input-error" class="modal__error"></span>
             </label>
             <label for="caption-image-input" class="modal__label"
               >Caption<input
@@ -100,17 +113,19 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
-              />
+                minlength="2"
+                maxlength="30"
+                required
+              /><span
+                id="caption-image-input-error"
+                class="modal__error"
+              ></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
       </div>
     </div>
-
-    <!-- preview -->
-    <!--  -->
-    <!--  -->
     <div class="modal modal_type_preview" id="preview-modal">
       <div class="modal__image-container">
         <button
@@ -123,6 +138,7 @@
         <p class="modal__caption"></p>
       </div>
     </div>
+    <script src="./scripts/validation.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
