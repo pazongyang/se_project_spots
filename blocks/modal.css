@@ -129,6 +129,7 @@
 
 .modal__submit-btn:disabled {
   opacity: 50%;
+  pointer-events: none;
 }
 
 .modal__image-container {
