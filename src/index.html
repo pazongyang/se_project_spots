@@ -33,12 +33,22 @@
           <div class="profile__column">
             <h1 class="profile__name">Bessie Coleman</h1>
             <p class="profile__description">Civil Aviator</p>
+
+            <!--  -->
             <button type="button" class="profile__edit-btn">
-              <img id="pencil" alt="pencil icon" />Edit Profile
+              <img
+                src="<%=require('./images/pencil.svg')%>"
+                class="profile__pencil-icon"
+                alt="pencil icon"
+              />Edit Profile
             </button>
           </div>
           <button type="button" class="profile__add-btn">
-            <img class="profile__add-btn-img" id="plus" alt="plus icon" />
+            <img
+              src="<%=require('./images/plus.svg')%>"
+              class="profile__add-btn-img"
+              alt="plus icon"
+            />
             New Post
           </button>
         </section>
@@ -144,7 +154,11 @@
           type="button"
           class="modal__close-btn modal__close-btn_type_preview"
         >
-          <img id="closePreviewIcon" alt="close button" />
+          <img
+            src="<%=require('./images/close-preview-icon.svg')%>"
+            id="closePreviewIcon"
+            alt="close button"
+          />
         </button>
         <img src="#" alt="" class="modal__image" />
         <p class="modal__caption"></p>
@@ -199,7 +213,7 @@
           />
         </button>
 
-<!--  -->
+        <!--  -->
 
         <h2 class="modal__delete-title" id="delete-modal-title">
           Are you sure you want to delete this image?

@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelector(".modal__close-btn_type_preview").src =
     closePreviewIconSrc;
   document.querySelector(".modal__delete-icon").src = deleteCloseIconSrc;
+  enableValidation(settings);
 });
 
 // Initialize API
@@ -239,7 +240,6 @@ newPostForm.addEventListener("submit", function handleAddCardSubmit(evt) {
     .addCard(values)
     .then((newCard) => {
       setButtonText(submitBtn, true, "save", "saving...");
-      // Add isLiked flag (new cards are not liked initially)
       newCard.isLiked = false;
       const cardEl = getCardElement(newCard);
       cardsList.prepend(cardEl);
@@ -249,6 +249,7 @@ newPostForm.addEventListener("submit", function handleAddCardSubmit(evt) {
     })
     .catch(console.error);
 });
+// before
 
 // Preview modal handlers
 previewModalCloseBtn.addEventListener("click", () => closeModal(previewModal));
